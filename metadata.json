@@ -1,0 +1,6 @@
+{
+  "name": "Post-Visit Report Generator",
+  "description": "A utility to easily fill, sign, and export post-visit field service reports to Word (.docx) and PDF (.pdf) formats with attachment support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
