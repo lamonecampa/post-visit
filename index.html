@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      // Workaround for platform/iframe environment where window.fetch has only a getter on the prototype
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            value: originalFetch,
+            writable: true,
+            configurable: true,
+            enumerable: true
+          });
+          if (typeof globalThis !== 'undefined' && globalThis !== window) {
+            Object.defineProperty(globalThis, 'fetch', {
+              value: originalFetch,
+              writable: true,
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          console.warn("Could not patch window.fetch property:", e);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/post-visit/assets/index-BlWk8ptV.js"></script>
+    <link rel="stylesheet" crossorigin href="/post-visit/assets/index-Ces-6bcA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
